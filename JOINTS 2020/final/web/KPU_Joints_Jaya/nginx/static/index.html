@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pemilu Joints Jaya 2019</title>
+    <meta name="description" content="Login - Register Template">
+    <meta name="author" content="Lorenzo Angelino aka MrLolok">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            background-color: #303641;
+        }
+    </style>
+    <script>
+        function submitForm()
+		{
+            let data = {
+                username: document.getElementById('username').value,
+                password: document.getElementById('password').value
+            }
+            fetch('/user-api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            }).then (response => {
+                return response.json()
+            }).then(data => {
+                if (data.status == 500) {
+                    alert('Username atau password salah.')
+                } else {
+                    alert(`Selamat datang, ${data.username}, terima kasih telah mengikuti ` + 
+                    `rangkaian acara Pemilu Joints Jaya 2019, sampai jumpa di tahun 2024.`)
+                }
+            }).catch(err => {
+                alert('Username atau password salah.')
+            })
+		}
+        
+    </script>
+</head>
+
+<body>
+    <div id="container-login">
+        <div id="title">
+            <h4>Pemilu Joints Jaya 2019</h4>
+            <i class="material-icons lock">lock</i> Login
+        </div>
+
+        <div class="input">
+            <div class="input-addon">
+                <i class="material-icons">face</i>
+            </div>
+            <input id="username" placeholder="Username" type="text" required class="validate" autocomplete="off" name="username">
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="input">
+            <div class="input-addon">
+                <i class="material-icons">vpn_key</i>
+            </div>
+            <input id="password" placeholder="Password" type="password" required class="validate" autocomplete="off" name="password">
+        </div>
+
+        <br>
+        <button id="register-link" onclick="submitForm()">Log In</button>
+
+        <div class="forgot-password">
+            <a href="#">Forgot your password?</a>
+        </div>
+        <div class="privacy">
+            <a href="#">Privacy Policy</a>
+        </div>
+
+        <div class="register">
+            Don't have an account yet?
+            <a href="register.html"><button id="register-link">Register here</button></a>
+        </div>
+    </div>
+</body>
+
+</html>

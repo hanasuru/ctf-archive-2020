@@ -1,0 +1,9 @@
+version: "3"
+services:
+  code:
+    image: binex:ez_pwn
+    build:
+      context: .
+    ports:
+      - "17075:5000"
+

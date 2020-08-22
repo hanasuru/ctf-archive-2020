@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  web-server:
+    build: .
+    tty: true
+    expose:
+      - '80'
+    ports:
+      - '40003:80'
+
+networks:
+  default:
+    external:
+      name: ctf-network

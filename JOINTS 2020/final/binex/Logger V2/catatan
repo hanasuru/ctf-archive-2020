@@ -1,0 +1,10 @@
+> untuk panitia
+>> pakai ubuntu 20.04
+>> peserta diberikan file sourcecode (loggerV2.c), ELF (loggerV2), dan libc (libc6_2.31-0ubuntu6_amd64.so)
+>> pastikan folder lg ada permission write (bisa untuk buat file + kalau bisa isi folder lg dihapus berkala)
+>> taruh file flag.txt di folder root
+>> up semua file di folder soal kecuali file libc dan source code
+>> cara compile ada di line awal source code
+
+> untuk peserta
+>> flag ada di /flag.txt

@@ -1,0 +1,21 @@
+version: "3"
+services:
+    web:
+        build: backend/
+    nginx:
+        build: nginx/
+        links:
+            - "web"
+        ports:
+            - "10002:80"
+        depends_on:
+            - "web"
+    admin-daemon:
+        build: "admin-daemon/"
+        links:
+            - "nginx"
+        depends_on:
+            - "nginx"
+            - "web"
+
+

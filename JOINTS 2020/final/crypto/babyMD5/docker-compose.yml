@@ -1,0 +1,15 @@
+version: '3'
+services:
+    babymd5:
+        image: babymd5
+        container_name: babymd5
+        build: .
+        restart: always
+        ports:
+            - "8890:5000"
+networks:
+  default:
+    external:
+      name: ctf-network
+
+

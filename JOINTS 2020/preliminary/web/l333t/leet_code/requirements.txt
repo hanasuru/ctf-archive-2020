@@ -1,0 +1,7 @@
+bcrypt
+flask
+flask_generic_views
+flask-sqlalchemy
+passlib
+wtforms
+flask_login

@@ -1,0 +1,15 @@
+version: '3'
+services:
+    baby-rsa:
+        image: babyrsa
+        container_name: babyRSA
+        build: .
+        restart: always
+        ports:
+            - "8889:5000"
+networks:
+  default:
+    external:
+      name: ctf-network
+
+

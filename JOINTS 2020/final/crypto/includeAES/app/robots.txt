@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /flag.php
+Disallow: /contact.php
+Disallow: /home.php

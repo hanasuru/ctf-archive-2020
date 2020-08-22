@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  {% if current_user.admin %}
+    Aha Admin should have access to the real flag right ?
+  {% else %}
+    Unfortunately your account cannot view the flag :(
+  {% endif %}
+</h1>
+<h2 class="subtitle">
+  {% if current_user.admin %}
+    Here you go admin : JOINTS20{L333T_k1dz_Pl4y_with_CrLF_and_CORS_31337}
+  {% else %}
+    Don't be sad, we give you the KW flag : JOINTS20{{fake_flag}}
+  {% endif %}
+</h2>
+{% endblock %}

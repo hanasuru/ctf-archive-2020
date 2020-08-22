@@ -1,0 +1,8 @@
+version: "3"
+services:
+  code:
+    image: binex:logger
+    build:
+      context: .
+    ports:
+      - "17071:5000"

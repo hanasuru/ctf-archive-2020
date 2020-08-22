@@ -1,0 +1,10 @@
+> untuk panitia
+>> pakai ubuntu 20.04
+>> peserta diberikan file ELF (logger) saja
+>> pastikan folder lg ada permission write (bisa untuk buat file + kalau bisa isi folder lg dihapus berkala)
+>> taruh file flag.txt di folder root
+>> up semua file di folder soal kecuali file source code
+>> cara compile ada di line awal source code
+
+> untuk peserta
+>> flag ada di /flag.txt

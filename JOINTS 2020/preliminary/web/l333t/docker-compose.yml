@@ -1,0 +1,8 @@
+version: "3"
+services:
+  web:
+    container_name: l333t_web
+    build: .
+    ports:
+      - "1337:5000"
+    restart: always

@@ -1,0 +1,9 @@
+version: "3"
+services:
+  code:
+    image: binex:pairs
+    build:
+      context: .
+    ports:
+      - "17076:5000"
+

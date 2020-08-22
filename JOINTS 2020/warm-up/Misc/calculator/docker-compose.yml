@@ -1,0 +1,9 @@
+version: '3'
+services: 
+    calculator:
+        build: .
+        container_name: calculator
+        restart: always
+        ports: 
+            - "4556:5000"
+            

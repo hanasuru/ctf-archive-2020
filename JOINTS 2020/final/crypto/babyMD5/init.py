@@ -1,0 +1,8 @@
+from hashlib import md5
+p1="4dc968ff0ee35c209572d4777b721587d36fa7b21bdc56b74a3dc0783e7b9518afbfa200a8284bf36e8e4b55b35f427593d849676da0d1555d8360fb5f07fea2c91388ff29d5b612fa918ec5a93adc02deb3ffbb79cd5ea6beaf86e3c46baf075e6739f3513a9e21a7fd17e6fe28a386938a6f81d31afd816394a0288dfce2b0".decode("hex")
+p2="4dc968ff0ee35c209572d4777b721587d36fa7b21bdc56b74a3dc0783e7b9518afbfa202a8284bf36e8e4b55b35f427593d849676da0d1d55d8360fb5f07fea2c91388ff29d5b612fa918ec5a93adc02deb3ffbb79cd5ea6beaf86e3c46baf075e6739f3513a9e21a7fd17e6fe28a386938a6f81d31afd816394a0288dfce2b0".decode("hex")
+assert(p1!=p2)
+assert(md5(p1).hexdigest()==md5(p2).hexdigest())
+g=open("guest_token.txt","w")
+g.write(p1.encode("base64"))
+g.close()

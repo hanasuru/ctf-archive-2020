@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  Please send us link to your coolest BB writeup or it can be from someone else
+</h1>
+<h2 class="subtitle">
+  We will verify the writeup and posted to the list if it's cool
+</h2>
+<form method="POST" action="/submit">
+  <div class="field">
+      <div class="control">
+          <input class="input is-large" type="text" name="writeup" placeholder="Writeup Url" autofocus="">
+      </div>
+  </div>
+  <button class="button is-block is-info is-large is-fullwidth">Send Writeup</button>
+</form>
+{% endblock %}

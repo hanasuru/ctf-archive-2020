@@ -1,0 +1,9 @@
+version: "3"
+services:
+  code:
+    image: binex:math1
+    build:
+      context: .
+    ports:
+      - "17073:5000"
+

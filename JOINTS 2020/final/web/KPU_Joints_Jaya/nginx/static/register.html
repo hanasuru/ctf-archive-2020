@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <meta name="description" content="Login - Register Template">
+    <meta name="author" content="Lorenzo Angelino aka MrLolok">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            background-color: #303641;
+        }
+    </style>
+    <script>
+        function register(oFormElement){
+            let data = {
+                username: document.getElementById('username').value,
+                password: document.getElementById('password').value
+            }
+            fetch('/user-api/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            }).then (response => {
+                return response.json()
+            }).then(data => {
+                if (data.status == 500) {
+                    alert('Username telah terdaftar.')
+                } else {
+                    alert(`Pendaftaran berhasil.`)
+                }
+            }).catch(err => {
+                alert('Username telah terdaftar.')
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <div id="container-register">
+        <div id="title">
+            <h4>Pemilu Joints Jaya 2019</h4>
+            <i class="material-icons lock">lock</i> Register
+        </div>
+
+        <div class="input">
+            <div class="input-addon">
+                <i class="material-icons">face</i>
+            </div>
+            <input id="username" placeholder="Username" type="text" required class="validate" autocomplete="off" name="username">
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="input">
+            <div class="input-addon">
+                <i class="material-icons">vpn_key</i>
+            </div>
+            <input id="password" placeholder="Password" type="password" required class="validate" autocomplete="off" name="password">
+        </div>
+
+        <div class="clearfix"></div>
+        <br>
+        <button id="register-link" onclick="register()">Register</button>
+
+        <div class="privacy">
+            <a href="#">Privacy Policy</a>
+        </div>
+
+        <div class="register">
+            Do you already have an account?
+            <a href="/"><button id="register-link">Log In here</button></a>
+        </div>
+    </div>
+</body>
+
+</html>

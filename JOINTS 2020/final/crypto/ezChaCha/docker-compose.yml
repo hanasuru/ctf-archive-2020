@@ -1,0 +1,15 @@
+version: '3'
+services:
+    chacha:
+        image: chacha
+        container_name: chacha
+        build: .
+        restart: always
+        ports:
+            - "8891:5000"
+networks:
+  default:
+    external:
+      name: ctf-network
+
+

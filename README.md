@@ -6,6 +6,10 @@ Simply a collection of archived CTF challs and its solver
 
 ## Table of content
 
+**Local**
+- <a href="HackToday 2020/">HackToday 2020</a>
+- <a href="JOINTS 2020/">JOINTS 2020</a>
+
 **Other**
 - <a href="H@cktivityCon CTF/">H@cktivityCon CTF</a>
 

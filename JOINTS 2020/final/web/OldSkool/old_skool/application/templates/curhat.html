@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>Beberapa Curhatan Mahasiswa Indonesia</h1>
+    {% from 'includes/_formhelpers.html' import render_field %}
+    <form method="POST" action="/curhat">
+        <div class="form-group">
+            {{render_field(form.body,class_="form-control",style="height: 70px;")}}
+        </div>
+        <button type="submit" class="btn btn-primary">Kirim Curhat</button>
+    </form>
+    <table class="table table-striped">
+      <tr>
+        <th>Dari</th>
+        <th>Curhatan</th>
+        <th>Detail</th>
+        <th>Report</th>
+      </tr>
+      {% for curhatan in curhatan_list %}
+        <tr>
+          <td>{{ curhatan.user.username }}</td>
+          <td>{{ curhatan.body[:10] }} ....</td>
+          <td><a href="/curhat/{{ curhatan.id }}" class="btn btn-primary pullright">Detail</a></td>
+          <td><button class="btn btn-danger pullright" id="delete_note" onclick="reportcurhat({{ curhatan.id }})">Report</button></td>
+        </tr>
+      {% endfor %} 
+    </table>
+{% endblock %}

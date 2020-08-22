@@ -1,0 +1,9 @@
+> untuk panitia
+>> pakai ubuntu 16.04
+>> peserta diberikan file ELF (math2) dan libc (libc6_2.23-0ubuntu11_amd64.so)
+>> up semua file di folder soal kecuali file libc dan source code
+>> cara compile ada di line awal source code
+
+> untuk peserta
+>> **hint 1 jam setelah soal diberikan** File struct exploitation
+

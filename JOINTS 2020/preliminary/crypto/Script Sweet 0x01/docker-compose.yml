@@ -1,0 +1,9 @@
+version: '3'
+services:
+    script_sweet_0x01:
+        build: .
+        container_name: script_sweet_0x01
+        restart: always
+        ports:
+            - "9998:5000"
+

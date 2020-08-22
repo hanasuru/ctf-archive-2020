@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  web-server:
+    container_name: ezStrMatch_webserver
+    build: .
+    tty: true
+    expose:
+      - '80'
+    ports:
+      - '40002:80'
+    restart: always
+
+networks:
+  default:
+    external:
+      name: ctf-network

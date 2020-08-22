@@ -1,0 +1,8 @@
+version: "3"
+services:
+  web:
+    container_name: underConstruct_web
+    build: .
+    ports:
+      - "20002:5000"
+    restart: always

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  Welcomeeeeeeee <br><br><br><br>
+  Username : {{ current_user.username }} <br>
+  Bio      : {{ current_user.bio }} <br>
+  IsAdmin  : {{ current_user.admin }}
+</h1>
+{% endblock %}

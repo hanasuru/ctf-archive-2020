@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  Here is top 25 recent cool BB writeup
+</h1>
+<br><br><br>
+<ol>
+  {% for wu in writeups %}
+    <li style="font-size: 20pt"><a href="{{wu.url}}">{{wu.title}}</a></li>
+  {% endfor %}
+</ol>
+{% endblock %}

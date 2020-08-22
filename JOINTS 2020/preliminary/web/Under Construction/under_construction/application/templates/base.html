@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AAAAAAAAAAAAAAAAAAAA</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+</head>
+
+<body>
+    <section class="hero is-primary is-fullheight">
+
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+
+
+                    <div id="navbarMenuHeroA" class="navbar-menu">
+                        <div class="navbar-end">
+                            <a href="{{ url_for('index') }}" class="navbar-item">
+                                Home
+                            </a>
+                            {% if current_user.is_authenticated %}
+                                <a href="{{ url_for('profile') }}" class="navbar-item">
+                                    Profile
+                                </a>
+                                <a href="{{ url_for('feedback') }}" class="navbar-item">
+                                    Feedback
+                                </a>
+                                <a href="/notes?" class="navbar-item">
+                                    Notes
+                                </a>
+                                <a href="/flag" class="navbar-item">
+                                    Flag
+                                </a>
+                                <a href="{{ url_for('logout') }}" class="navbar-item">
+                                    Logout
+                                </a>
+                            {% else %}
+                                <a href="{{ url_for('login') }}" class="navbar-item">
+                                    Login
+                                </a>
+                                <a href="{{ url_for('register') }}" class="navbar-item">
+                                    Register
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+
+            <div id="notif_msg" class="alert alert-{{ category }} has-text-centered">{{ message }}</div>
+          {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <div class="hero-body">
+            <div class="container has-text-centered">
+               {% block content %}
+               {% endblock %}
+            </div>
+        </div>
+    </section>
+  <script>
+    $(document).ready(function () {
+      notif_msg = $("#notif_msg");
+      if(notif_msg){
+          notif_msg.slideUp(3000);
+      }
+    });
+  </script>
+</body>
+
+</html>
