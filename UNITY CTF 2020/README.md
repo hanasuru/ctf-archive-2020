@@ -19,14 +19,14 @@
 ### Bonus
 | name |
 |-------|
-| [Free Flag](Free Flag/) |
+| <a href="Free Flag/">Free Flag</a> |
 
 <br>
 
 ### Cryptography
 | name |
 |-------|
-| [BOB_s _ PRNG](BOB_s _ PRNG/) |
+| <a href="BOB_s _ PRNG/">BOB_s _ PRNG</a> |
 | [Klepto](Klepto/) |
 
 <br>
@@ -34,7 +34,7 @@
 ### Forensic
 | name |
 |-------|
-| [NEET Diary](NEET Diary) |
+| <a href="NEET Diary/">NEET Diary</a> |
 | [P](P/) |
 
 <br>
@@ -50,8 +50,8 @@
 | name |
 |-------|
 | [Backdoor](Backdoor/) |
-| [Image Converter](Image Converter/) |
-| [my anime](my anime/) |
+| <a href="Image Converter/">Image Converter</a> |
+| <a href="my anime/">my anime</a> |
 | [stromeo](stromeo) |
 
 ---
