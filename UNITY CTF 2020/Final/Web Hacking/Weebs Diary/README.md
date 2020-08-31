@@ -4,10 +4,9 @@
 **Solves:** 4
 
 ## Description
->Kimi wa h\xc4\xabr\xc5\x8d ni nareru\r\n\r\n\r\nhttp://34.69.142.187:2003/
+>Kimi wa hīrō ni nareru<br><br>http://34.69.142.187:2003/
 
-**Hint**
-* -
+### Hint
 
 ## Solution
 

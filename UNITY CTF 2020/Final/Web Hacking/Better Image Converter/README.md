@@ -4,10 +4,9 @@
 **Solves:** 5
 
 ## Description
->We provide website to convert jpg format to gif using imagemagick\r\n\r\nhttp://34.69.142.187:2000/app/
+>We provide website to convert jpg format to gif using imagemagick<br><br>http://34.69.142.187:2000/app/
 
-**Hint**
-* -
+### Hint
 
 ## Solution
 

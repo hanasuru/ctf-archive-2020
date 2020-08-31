@@ -4,10 +4,10 @@
 **Solves:** 9
 
 ## Description
->Secret is hidden in mistery box\r\n\r\nhttp://34.69.142.187:2002/
+>Secret is hidden in mistery box. 
+>http://34.69.142.187:2002/
 
-**Hint**
-* -
+### Hint
 
 ## Solution
 
