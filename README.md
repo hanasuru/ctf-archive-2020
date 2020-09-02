@@ -13,5 +13,5 @@ Simply a collection of archived CTF challs and its solver
 - <a href="UNITY CTF 2020/">UNITY CTF 2020</a>
 
 **Other**
+- <a href="Fword CTF/">Fword CTF</a>
 - <a href="H@cktivityCon CTF/">H@cktivityCon CTF</a>
-
