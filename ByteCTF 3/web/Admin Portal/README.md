@@ -4,7 +4,7 @@
 | **Solves:** 39
 
 ## Description
->Hello Admin! <br>Please login :)<br><br>https://monster-bytectf.herokuapp.com/<br><br>Author: **```Anshul```**
+>Hello Admin! <br>Please login :)<br><br>https://monster-bytectf.herokuapp.com/<br><br>Author: **```Anshul```**
 
 ### Hint
  

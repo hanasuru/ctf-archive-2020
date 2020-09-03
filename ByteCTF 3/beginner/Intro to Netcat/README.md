@@ -4,7 +4,7 @@
 | **Solves:** 107
 
 ## Description
->https://www.varonis.com/blog/netcat-commands/<br><br>nc 23.100.18.186 10001
+>https://www.varonis.com/blog/netcat-commands/<br><br>nc 23.100.18.186 10001
 
 ### Hint
  
