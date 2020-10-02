@@ -138,13 +138,17 @@ class Exploit(object):
     self.conn.sendlineafter("(in hex) : ", final_payload)
     print self.conn.recvuntil("}")
 
-exploit_object = Exploit("localhost", 9997)
-exploit_object.get_initial_safe_identity()
+    
+def main():
+  exploit_object = Exploit("localhost", 9997)
+  exploit_object.get_initial_safe_identity()
 
-# Sebenernya harus recover plaintext dulu biar tau beberapa key di object nya yang ga di expose, tapi ini solvernya langsung forging aja wkwk
-# exploit_object.recover_plaintext()
-# print "".join(exploit_object.recovered_plaintext)
+  # Sebenernya harus recover plaintext dulu biar tau beberapa key di object nya yang ga di expose, tapi ini solvernya langsung forging aja wkwk
+  # exploit_object.recover_plaintext()
+  # print "".join(exploit_object.recovered_plaintext)
 
-intended_plaintext = '{"agent_uid": 1337, "agent_status": 1, "agent_username": "lord", "agent_role": "admin", "agent_age": 2}'
-exploit_object.forge_ciphertext(intended_plaintext) 
-exploit_object.get_flag()
+  intended_plaintext = '{"agent_uid": 1337, "agent_status": 1, "agent_username": "lord", "agent_role": "admin", "agent_age": 2}'
+  exploit_object.forge_ciphertext(intended_plaintext) 
+  exploit_object.get_flag()
+
+main()
